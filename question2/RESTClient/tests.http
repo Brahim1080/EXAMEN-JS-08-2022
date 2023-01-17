@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:3000
+
+### Create a place
+
+POST {{baseUrl}}/places
+Content-Type: application/json
+
+{
+    "name":"Magic Green",
+    "description":"Epinards, Brocolis, Olives vertes, Basilic"
+}
+
+### Create a user
+
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name":"Brams",
+    "mail":"brahim@gmail.com"
+}
+
+### Like a place
+PATCH {{baseUrl}}/users/addFavourite
+Content-Type: application/json
+
+{
+    "user":"8449e69b-dcc8-474c-aea0-184ee106e36d",
+    "place":"4f37f928-c3c9-4508-8343-7cb69ca01be2"
+}
